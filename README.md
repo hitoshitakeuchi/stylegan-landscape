@@ -18,6 +18,10 @@ https://drive.google.com/file/d/1fgmuI9aMH2Kge02UaUYMx3T_lzGSWTYK/view?usp=shari
 ## Run
 
 ```bash
+python encode_images.py img/ generated_images/ latent/
+```
+
+```bash
 python morphing.py
 ```
 

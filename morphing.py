@@ -57,11 +57,9 @@ def main():
     for i in range(1,101,4):
         src_dlatents1 = np.load('./latent/Fuji.npy') 
         src_dlatents1 = np.expand_dims(src_dlatents1, 0)
-
         src_dlatents2 = np.load('./latent/Kilauea.npy') 
         src_dlatents2 = np.expand_dims(src_dlatents2, 0)
-        src_dlatents = i/100*src_dlatents1+(1-i/100)*src_dlatents2
-        
+        src_dlatents = i/100*src_dlatents1+(1-i/100)*src_dlatents2        
         src_images = Gs.components.synthesis.run(src_dlatents, randomize_noise=False, **synthesis_kwargs)
         # Save image.
         os.makedirs(config.result_dir, exist_ok=True)
